@@ -8,11 +8,11 @@ services:
     ports:
       - "3000"
     environment:
-                - DB_NAME=${db-name}
-                - DB_HOST=${db-host}
-                - DB_USER=${db-user}
-                - DB_PASS=${db-pass}
-                - APP_PORT=${app-port}
+      - DB_NAME=${DB_NAME}
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - APP_PORT=${APP_PORT}
     volumes:
       - app-data:/apps/public/images
 
@@ -24,10 +24,10 @@ services:
     ports:
       - "3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=${db-pass}
-      - MYSQL_DATABASE=${db-name}
-      - MYSQL_USER=${db-user}
-      - MYSQL_PASSWORD=${db-pass}
+      - MYSQL_ROOT_PASSWORD=${DB_PASS}
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASS}
     volumes:
       - ./apps/database/:/docker-entrypoint-initdb.d
       - db-data:/var/lib/mysql
