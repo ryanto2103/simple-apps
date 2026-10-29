@@ -44,6 +44,8 @@ pipeline {
             steps {
                 sh '''
                 cd apps
+                chmod u+x node_modules/.bin/jest
+                chmod u+x node_modules/jest/bin/jest.js
                 npm run test:coverage
                 '''
             }
