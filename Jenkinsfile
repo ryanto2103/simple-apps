@@ -71,7 +71,7 @@ pipeline {
                 withCredentials ([
                     string(credentialsId: 'db-name', variable: 'DB_NAME'),
                     string(credentialsId: 'db-user', variable: 'DB_USER'),
-                    string(credentialsId: 'db-password', variable: 'DB_PASSWORD'),
+                    string(credentialsId: 'db-pass', variable: 'DB_PASS'),
                     string(credentialsId: 'db-host-container', variable: 'DB_HOST'),
                     string(credentialsId: 'app-port', variable: 'APP_PORT')
                 ]) {
